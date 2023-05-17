@@ -43,7 +43,7 @@ const remove = async (req, res) => {
       },
     });
 
-    return res.send("User deleted");
+    return res.status(200).json("User deleted");
   } catch (e) {
     return res.status(400).json({ message: "Failed to remove user :D" });
   }
@@ -63,7 +63,7 @@ const edit = async (req, res) => {
       },
     });
 
-    return res.send("User updated");
+    return res.status(200).json("User updated");
   } catch (e) {
     return res.status(400).json({ message: "Failed to edit user :DD" });
   }
